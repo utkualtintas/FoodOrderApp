@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         chips_textView.setText("Chips count: " + chips_quantity);
     }
 
-    public void submitOrder(View view){
+    public void submitOrder(View view) {
         String mailBody = mailBodyBuilder();
         Intent email = new Intent(Intent.ACTION_SEND);
         email.putExtra(Intent.EXTRA_EMAIL, new String[]{"utkualtintas.tr@gmail.com"});
@@ -99,10 +99,10 @@ public class MainActivity extends AppCompatActivity {
             sauces = sauces + "mustard.";
         }
         String result;
-        if((!ketchupCheckBox.isChecked())&&(!mayoCheckBox.isChecked())&&(!mustardCheckbox.isChecked())){
-            result = cheeseBurger_quantity+" Cheeseburgers, "+chips_quantity+" chips, "+dessert_quantity+" desserts "+"\nName: " + name + "\nAdress: " + adress + "\nAdditional notes: " + notes ;
-        } else{
-            result = cheeseBurger_quantity+" Cheeseburgers, "+chips_quantity+" chips, "+dessert_quantity+" desserts "+"\nName: " + name + "\nAdress: " + adress + "\nAdditional notes: " + notes + "\n" + sauces;
+        if ((!ketchupCheckBox.isChecked()) && (!mayoCheckBox.isChecked()) && (!mustardCheckbox.isChecked())) {
+            result = cheeseBurger_quantity + " Cheeseburgers, " + chips_quantity + " chips, " + dessert_quantity + " desserts " + "\nName: " + name + "\nAdress: " + adress + "\nAdditional notes: " + notes;
+        } else {
+            result = cheeseBurger_quantity + " Cheeseburgers, " + chips_quantity + " chips, " + dessert_quantity + " desserts " + "\nName: " + name + "\nAdress: " + adress + "\nAdditional notes: " + notes + "\n" + sauces;
         }
         return result;
 
